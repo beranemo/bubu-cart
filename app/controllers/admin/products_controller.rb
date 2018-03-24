@@ -1,7 +1,9 @@
 class Admin::ProductsController < ApplicationController
   
   def index
-    @products = Product.all
+    #@products = Product.all
+    date = DateTime.now
+    @products = Product.where(created_at: date.beginning_of_month..date.end_of_month)
   end
   
   def new
