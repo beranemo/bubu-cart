@@ -19,6 +19,10 @@ gem 'ffaker'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
+gem 'simple_form'
+gem 'carrierwave'
+gem 'mini_magick'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
