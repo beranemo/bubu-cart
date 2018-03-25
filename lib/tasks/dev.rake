@@ -39,12 +39,11 @@ namespace :dev do
       created_at: FFaker::Time
       ) 
     end
-    
-    
+      
     products = Product.all
     
     products.each do |g|
-      dat = rand_time(107.days.ago).to_s
+      dat = rand_time(7.days.ago).to_s
       first = dat[0..10]
       middle = 10 + rand(11)
       last = dat[13..-1]
@@ -54,6 +53,6 @@ namespace :dev do
       g.save
     end
     
-    puts "Product #{Product.count} data created"
+    puts "Product #{Product.count} data created "
   end
 end

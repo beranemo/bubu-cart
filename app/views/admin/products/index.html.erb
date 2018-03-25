@@ -1,6 +1,6 @@
 <h1>Admin Index Page</h1>
 <ul>
   <% @products.each do |product| %>
-  <li><%= product.id %> <%= link_to product.title, admin_product_path(product) %> <%= product.created_at %></li>
+  <li><%= product.id %> <%= link_to product.title, admin_product_path(product) %> <%= product.created_at.to_s[0..15] %></li>
   <% end %>
 </ul>
